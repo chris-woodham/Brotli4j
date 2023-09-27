@@ -12,8 +12,6 @@ function exitWithError() {
 
 mkdir -p "$TARGET_CLASSES_PATH"
 
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> HERE HERE HERE HERE HERE HERE HERE"
-
 cd "$TARGET_PATH"
 cmake ../../../ || exitWithError $?
 make || exitWithError $?
