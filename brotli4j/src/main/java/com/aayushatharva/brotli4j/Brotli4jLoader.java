@@ -140,6 +140,10 @@ public class Brotli4jLoader {
             } else if (archName.equalsIgnoreCase("aarch64")) {
                 return "osx-aarch64";
             }
+        } else if (osName.startsWith("FreeBSD")) {
+            if (archName.equalsIgnoreCase("aarch64")) {
+                return "freebsd-aarch64";
+            } 
         }
         throw new UnsupportedOperationException("Unsupported OS and Architecture: " + osName + ", " + archName);
     }
